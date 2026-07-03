@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeenash | Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+   
+</head>
+<body >
+    <nav class="navbar">
+    <div class="logo">
+        <a href="#">Zeenash Fatima</a>
+    </div>
+
+    <ul class="menu">
+        <li><a href="#home"
+             class="active">Home</a></li>
+        <li><a href="#about" 
+             class="active">About</a></li>
+        <li><a href="#skills" 
+             class="active">Skills</a></li>
+        <li><a href="#projects"
+              class="active">Projects</a></li>
+        <li><a href="#learning"
+              class="active">Learning</a></li>
+        <li><a href="#contact" 
+             class="active">Contact me</a></li>
+    </ul>
+</nav>
+<section id="home" class="home">
+
+    <div class="home-content">
+        <h1>Hi, I'm <span>Zeenash Fatima</span></h1>
+
+        <h2>Grade: 10th</h2>
+
+        <h3>Seerat Educational System</h3>
+
+        <p class="title">Creative Web Developer</p>
+
+        <p class="welcome">
+            Welcome to my personal portfolio! I'm passionate about learning web development and turning creative ideas into beautiful, user-friendly websites. Every project helps me improve my skills, explore new technologies, and grow as a future web developer. Thank you for visiting my website.<br>I hope you enjoy exploring my work!
+        </p>
+
+        <button onclick="welcomeVisitor()">Welcome Visitor</button>
+        <p id="message"></p>
+    </div>
+    <script>
+function welcomeVisitor() {
+
+    let visitorName = prompt("What is your name?");
+
+    if (visitorName == "" || visitorName == null) {
+        alert("Please enter your name.");
+    } else {
+
+        let message = "Hello " + visitorName + "! I am Zeenash, a Grade 10 student at Seerat Educational System. Welcome to my personal portfolio website.";
+
+        alert(message);
+
+       
+    }
+
+}
+</script>  
+
+    <div class="image">
+        <img src="profile.jpeg"alt="My Photo">
+    </div>
+
+</div>
+        
+
+    
+    
+
+</section>
+<section id="about" class="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        My name is Zeenash Fatima. I am a Grade 10 student at Seerat Educational System. 
+        I am a passionate and creative learner who enjoys exploring the world of technology and web development.
+    </p>
+
+    <p>
+        My hobbies include designing websites, learning new computer skills, and exploring creative ideas on the internet. 
+        My favourite topic in computer studies is web development, especially HTML and CSS, because I enjoy building and designing webpages.
+    </p>
+
+    <p>
+        My dream job is to become a professional Web Developer and create amazing websites and applications that help people in their daily lives.
+    </p>
+
+    <p>
+        In computer studies, I have learned the basics of HTML, CSS, and how websites are structured. 
+        I am also improving my skills in designing attractive and user-friendly web pages.
+    </p>
+
+</section>
+
+<section class="skills" id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">MS Excel</div>
+        <div class="skill-card">Power BI</div>
+        <div class="skill-card">Computer Basics</div>
+        
+    </div>
+    <button onclick="showSkill()">Show My Best Skill</button>
+
+<p id="skillMessage"></p>
+<script>
+function showSkill() {
+
+    let message = "My favourite skill is Web Development because I enjoy designing beautiful websites and learning new coding skills every day.";
+
+    alert(message);
+
+} 
+
+
+
+    
+</script>
+<div class="image">
+        <img src="programming skills.PNG"alt="My Photo">
+    </div>
+</section>
+
+
+
+<section class="projects" id="projects">
+    <h2 style="color: #3b82f6;">My Projects</h2>
+
+    <div class="projects-container">
+
+        
+        <div class="project-card">
+            <div class="project-icon">🌐</div>
+            <h3>My Stylish Web Page</h3>
+            <p>A simple and attractive personal web page built using HTML and CSS.</p>
+            <p><strong>Skills:</strong> HTML, CSS</p>
+            <button>View Details</button>
+        </div>
+
+        
+        <div class="project-card">
+            <div class="project-icon">📊</div>
+            <h3>Excel Electricity Bill Calculator</h3>
+            <p>An Excel sheet that automatically calculates electricity bills using formulas.</p>
+            <p><strong>Skills:</strong> MS Excel</p>
+            <button>View Details</button>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-icon">📈</div>
+            <h3>Power BI Dashboard</h3>
+            <p>An interactive dashboard showing data insights using Power BI tools.</p>
+            <p><strong>Skills:</strong> Power BI</p>
+            <button>View Details</button>
+        </div>
+
+    </div>
+</section>
+<h2 style="color: #3b82f6;">Find My Project</h2>
+
+<select id="projectType">
+    <option value=""> Select a Project Type </option>
+    <option value="web">Web Design</option>
+    <option value="data">Data Work</option>
+    <option value="dashboard">Dashboard</option>
+    
+</select>
+
+<button onclick="findProject()">Find Project</button>
+
+<p id="projectMessage"></p>
+<script>
+     function findProject() {
+
+    let project = document.getElementById("projectType").value;
+    let message = "";
+
+    if (project == "") {
+        message = "Please select a project type.";
+    }
+    else if (project == "web") {
+        message = "You should view my project: My Stylish Web Page. I used HTML and CSS in this project.";
+    }
+    else if (project == "data") {
+        message = "You should view my project: Excel Electricity Bill Calculator. I used MS Excel formulas in this project.";
+    }
+    else if (project == "dashboard") {
+        message = "You should view my project: Power BI Dashboard. I used Power BI to create interactive reports.";
+    }
+   
+
+    alert(message);
+
+    document.getElementById("projectMessage").innerHTML = message;
+}
+</script>
+
+
+<section class="learning" id="learning">
+    <h2>What I Have Learned</h2>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Skill</th>
+                <th>What I Learned</th>
+                <th>My Level</th>
+            </tr>
+
+            <tr>
+                <td>HTML</td>
+                <td>Headings, paragraphs, lists, images, links</td>
+                <td>Good</td>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td>Colors, fonts, borders, spacing, hover effects</td>
+                <td>Good</td>
+            </tr>
+
+            <tr>
+                <td>JavaScript</td>
+                <td>Variables, prompt, alert, if-else, functions</td>
+                <td>Learning</td>
+            </tr>
+
+            <tr>
+                <td>MS Excel</td>
+                <td>Tables, formulas, charts</td>
+                <td>Good</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<section class="contact">
+
+    <h1>Contact Me</h1>
+
+    <form>
+
+        <input type="text" id="name" placeholder="Enter Your Name">
+
+        <input type="email" id="email" placeholder="Enter Your Email">
+
+        <select id="reason">
+            <option value="">Select Reason</option>
+            <option value="My Projects">My Projects</option>
+            <option value="Web Design">Web Design</option>
+            <option value="Coding">Coding</option>
+            <option value="General Question">General Question</option>
+        </select>
+
+        <textarea id="message" placeholder="Write Your Message"></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <p id="reply"></p>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+    
+
+    
