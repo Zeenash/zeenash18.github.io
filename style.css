@@ -7,19 +7,14 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(
-        135deg,
-        #07142E 0%,
-        #0A1F44 45%,
-        #132E63 100%
-    );
+    background:  orange
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
 }
 .navbar {
-    background: #1f2937;
+    background:  rgb(0, 128, 17);
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
@@ -28,7 +23,7 @@ body {
 }
 
 .logo a {
-    color: #3b82f6;
+    color:  white    ;
     font-size: 28px;
     font-weight: bold;
     text-decoration: none;
@@ -81,7 +76,7 @@ body {
 }
 
 .home-content span {
-    color: #3b82f6;
+    color: rgb(0, 128, 17;
 }
 
 .home-content h2,
@@ -192,6 +187,7 @@ button:hover {
      box-shadow: 0 4px 10px black;
     transition: 0.3s ease;
     cursor: pointer;
+    background:  rgb(0, 128, 17);
 }
 
 
